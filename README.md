@@ -1,1 +1,1 @@
-This is a repository for finance tracker webapp 
+This is a repository for Food-wastage-reduction-tracker webapp
