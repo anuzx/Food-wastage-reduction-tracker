@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesignup.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>
+        Sign Up
+      </h1>
+      <form>
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password" required>
+        </div>
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+        </div>
+
+        <!-- Checkboxes for NGO or Restaurant -->
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" id="is-ngo">
+            I am an NGO
+          </label>
+          <label>
+            <input type="checkbox" id="is-restaurant">
+            I am a Restaurant
+          </label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+        <p class="options">
+          Already have an account? <a href="C:\Users\ASUS\Desktop\hackathon_project\Food-wastage-reduction-tracker\login\index1.html">Go to Login</a> <!--not able to transition will see later -->>
+        </p>
+      </form>
+      <div class="google-signup">
+        <button id="google-signup-btn">
+          <i class="fab fa-google" style="margin-right: 8px;"></i>
+          Sign Up with Google
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="signupscript.js"></script>
+</body>
+</html>

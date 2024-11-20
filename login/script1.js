@@ -9,11 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Add an event listener to the form's submit event
     form.addEventListener("submit", (event) => {
+      
       event.preventDefault(); // Prevent the default form submission behavior
-  
+      
       // Get values from input fields
       const email = emailInput.value.trim();
       const password = passwordInput.value.trim();
+
+      // use these email and passowrd for firebase authentication
+      
   
       // Validate the inputs
       if (!validateEmail(email)) {
@@ -42,8 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
  //function_for_signup_page_transition
 Signup.addEventListener("click",(event)=>
     {
-       event.preventDefault();
-       alert("Redirecting to Signup page..");
+        
+       window.location.href = "Food-wastage-reduction-tracker\signup\indexsignup.html"; // Redirect to the desired page
+
     
     });
   
