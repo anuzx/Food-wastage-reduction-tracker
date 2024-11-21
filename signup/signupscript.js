@@ -1,58 +1,51 @@
-document.addEventListener("DOMContentLoaded",()=>{
+
+// Import the functions you need from the SDKs you need
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+// import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDj-mzZcOmy2XCRIw8KgRjpShq0xkVQeug",
+  authDomain: "food-wastage-reduction-tracker.firebaseapp.com",
+  projectId: "food-wastage-reduction-tracker",
+  storageBucket: "food-wastage-reduction-tracker.firebasestorage.app",
+  messagingSenderId: "336442254850",
+  appId: "1:336442254850:web:e472eabb07936cb07869b"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
 
 
-const form = document.querySelector("form");
-const ngocheckbox = document.getElementById("is-ngo");
-const restaurantcheckbox = document.getElementById("is-restaurant");
-const email = document.getElementById("email");
-const password =document.getElementById("password");
-const againpass = document.getElementById("confirm-password");
+//submit button
+const submit = document.getElementById('submit');
+submit.addEventListener("click", function (event) {
+  event.preventDefault()
+  //inputs
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;   
 
-// now adding logic for what will happen when user will click on submit button
-form.addEventListener("submit",(e)=>{
-   // if the fields are blank 
-   e.preventDefault();
-   
-   const emailforsignup = email.value.trim();
-   const passowrdforsignup = password.value.trim();
-   const renterpassword = againpass.value.trim();
-   if(!validateEmail(emailforsignup)){
-    alert("please enter a valid email address");
-    return;
-    
-   }
-   if(passowrdforsignup<6){
-    alert("Password length should be 6");
-    return;
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up 
+      const user = userCredential.user;
+      alert("Creatinfg Account...")
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(`Error: ${errorMessage}`);
+      console.error("Error code:", errorCode, "Message:", errorMessage);
+      // ..
+    });
 
-   }
-   if(passowrdforsignup != renterpassword){
-    alert("confirm password does not matches");
-    return;
-   }
-   
-   // firebase code goes here
-   if(ngocheckbox.checked){
-    alert("everything uploaded successfully and you are a ngo");
-
-   }
-   else if(restaurantcheckbox.checked){
-    alert("everything uploaded succesfully and you are restaurant");
-   }
-   else{
-    alert("everything uploaded to database");
-   }
-   // creating alert on successful submission
-   
-
-   
-});
-
-
-// function for email vaildation
-function validateEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for email validation
-    return emailPattern.test(email);
-  }
-
-});
+})
