@@ -35,10 +35,16 @@ const submit = document.getElementById('submit');
 submit.addEventListener("click", function (event) {
   event.preventDefault()
   //inputs
+
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;   
   const fullname = document.getElementById("name").value;
   const userType = document.getElementById("usertype").value;
+  const confirmpassword = document.getElementById("confirmpassword").value;
+  if(confirmpassword != password){
+    alert.log("confirm password doesnt matches");
+  }
+  
 
 
 if (!submit) {
