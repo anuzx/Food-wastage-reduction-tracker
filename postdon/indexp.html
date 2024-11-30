@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Donation</title>
+  <link rel="stylesheet" href="stylep.css">
+</head>
+<body>
+  <div class="donation-container">
+    <h1>Post a Donation</h1>
+    <form id="donationForm">
+      <!-- Mobile Number -->
+      <div class="form-group">
+        <label for="mobileNo">Mobile Number:</label>
+        <input type="tel" id="mobileNo" name="mobileNo" placeholder="Enter your mobile number" required>
+      </div>
+
+      <!-- Food Items and Quantities -->
+      <div class="form-group">
+        <label>Food Items and Quantities:</label>
+        <div class="food-item">
+          <input type="text" id="foodItem1" name="foodItems" placeholder="Food item 1 (e.g., Rice)" required>
+          <input type="text" id="quantity1" name="quantity" placeholder="Quantity (e.g., 1 bowl)" required>
+        </div>
+        
+        <!-- Add more items dynamically -->
+        <button type="button" id="addItemBtn">Add More Items</button>
+        <button type="remove" id="removeItemBtn">Remove Last Item</button>
+      </div>
+
+      <!-- Best Till -->
+      <div class="form-group">
+        <label for="bestTillDate">Best Till (Date and Time):</label>
+        <input type="date" id="bestTillDate" name="bestTillDate" required>
+        <input type="time" id="bestTillTime" name="bestTillTime" required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" id="submitBtn">Submit Donation</button>
+      
+
+    </form>
+  </div>
+
+  <script src="scriptp.js"></script>
+</body>
+</html>
