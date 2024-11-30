@@ -246,3 +246,32 @@ body {
 .darkmode #theme-switch svg:last-child{
   display: block;
 }
+
+.bottom-right-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bottom-right-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.bottom-right-button:active {
+  background-color: #003f7f;
+  transform: scale(0.9);
+}
