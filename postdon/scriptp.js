@@ -32,10 +32,9 @@ addItemBtn.addEventListener("click", function () {
   foodItemContainer.insertBefore(newFoodItemDiv, addItemBtn); // Add before the "Add More Items" button
 });
 
-// remove btn script
-// Remove the last food item
-// Remove the last food item
-// Remove Last Item
+
+//remove item button functionality
+
 
 const removeItemBtn = document.getElementById("removeItemBtn");
 
@@ -52,6 +51,10 @@ removeItemBtn.addEventListener("click", (event) => {
     alert("At least one food item must remain in the form.");
   }
 });
+
+
+
+////**firebase code goessss hereeee */
 
 
 });
