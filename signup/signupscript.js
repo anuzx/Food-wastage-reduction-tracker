@@ -41,8 +41,12 @@ submit.addEventListener("click", function (event) {
   const fullname = document.getElementById("name").value;
   const userType = document.getElementById("usertype").value;
   const confirmpassword = document.getElementById("confirmpassword").value;
+ 
   if(confirmpassword != password){
-    alert.log("confirm password doesnt matches");
+    alert("confirm password doesnt matches");
+    window.location.reload();
+    return;
+    
   }
   
 
