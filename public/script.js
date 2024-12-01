@@ -36,6 +36,6 @@ themeSwitch.addEventListener("click", () => {
 })
 
 document.getElementById('redirect-button').addEventListener('click', function() {
-  window.location.href = 'postdon/indexp.html';
+  window.location.href ="indexp.html";
 });
 
