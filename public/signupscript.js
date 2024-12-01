@@ -41,7 +41,7 @@ submit.addEventListener("click", function (event) {
   const fullname = document.getElementById("name").value;
   const userType = document.getElementById("usertype").value;
   const confirmpassword = document.getElementById("confirmpassword").value;
- 
+  const currentUser = auth.currentUser;
   if(confirmpassword != password){
     alert("confirm password doesnt matches");
     window.location.reload();
@@ -64,6 +64,7 @@ if (!submit) {
         Email: email,
         Fullname: fullname,
         UserType: userType,
+        donorId: currentUser.uid
       });
       console.log("document added to firestore successfully");
       alert("Data added successfully");

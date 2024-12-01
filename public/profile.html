@@ -1,1 +1,54 @@
-hi there you have Successfuldone everything
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .card:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen flex items-center justify-center">
+  <div class="max-w-lg w-full bg-white rounded-lg shadow-lg p-6 card transition-all duration-300">
+    <div class="text-center mb-6">
+      <h1 class="text-2xl font-bold text-gray-800">Profile</h1>
+      <p class="text-gray-500 mt-1" id="userEmail">Loading...</p>
+    </div>
+    <div class="space-y-4">
+      <div class="flex justify-between items-center">
+        <span class="text-gray-600 font-medium">Signed in as:</span>
+        <span id="userType" class="text-gray-800 font-semibold">Loading...</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span class="text-gray-600 font-medium">Number of Donations:</span>
+        <span id="userDonations" class="text-gray-800 font-semibold">0</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span class="text-gray-600 font-medium">Donations Claimed:</span>
+        <span id="userClaims" class="text-gray-800 font-semibold">0</span>
+      </div>
+    </div>
+    <button
+      class="mt-6 w-full py-2 px-4 bg-gradient-to-r from-teal-500 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition"
+      id="logoutButton">
+      Logout
+    </button>
+  </div>
+
+  <script type="module" src="profile.js"></script>
+</body>
+</html>
