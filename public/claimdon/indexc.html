@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Page</title>
+
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="stylec.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<!-- Header -->
+
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Find Donations Near You</h1>
+    <p>Claim donations that are available in your area!</p>
+  </div>
+
+  <!-- Donation Cards Container -->
+  <div class="card-container">
+    <!-- Cards will be populated dynamically by JavaScript -->
+  </div>
+  <!-- Modal for Claim Confirmation -->
+<div id="claimModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Claim Successful!</h2>
+      <p>You will get a confirmation email shortly.</p>
+      <p>Visit your profile page to view your claimed donations.</p>
+      <a href="profile.html" class="profile-link">Go to Profile</a>
+    </div>
+  </div>
+  
+
+  <script type="module">
+    // Firebase configuration
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDj-mzZcOmy2XCRIw8KgRjpShq0xkVQeug",
+      authDomain: "food-wastage-reduction-tracker.firebaseapp.com",
+      projectId: "food-wastage-reduction-tracker",
+      storageBucket: "food-wastage-reduction-tracker.appspot.com",
+      messagingSenderId: "336442254850",
+      appId: "1:336442254850:web:e472eabb07936cb07869b"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    console.log("Firebase Initialized");
+  </script>
+<!-- Footer -->
+<!-- Footer Section -->
+<footer class="footer">
+    <p>Made by the students of JSS Noida with <span class="heart">&#10084;</span> love</p>
+  </footer>
+  
+<script type="module" src="scriptc.js"></script>
+</body>
+</html>
