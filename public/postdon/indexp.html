@@ -41,8 +41,26 @@
       
 
     </form>
+     <!-- Firebase and App Logic -->
+  <script type="module">
+    // Firebase configuration
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDj-mzZcOmy2XCRIw8KgRjpShq0xkVQeug",
+      authDomain: "food-wastage-reduction-tracker.firebaseapp.com",
+      projectId: "food-wastage-reduction-tracker",
+      storageBucket: "food-wastage-reduction-tracker.appspot.com",
+      messagingSenderId: "336442254850",
+      appId: "1:336442254850:web:e472eabb07936cb07869b"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    console.log("Firebase Initialized");
+  </script>
   </div>
 
-  <script src="scriptp.js"></script>
+  <script type="module" src="scriptp.js"></script>
 </body>
 </html>
