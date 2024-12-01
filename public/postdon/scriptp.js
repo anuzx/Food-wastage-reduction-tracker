@@ -1,3 +1,10 @@
+alert("javacript file has loaded");
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+// Firestore initialization
+const db = getFirestore();
+ 
+
 document.addEventListener("DOMContentLoaded", () => {
 
 // Get references to the necessary DOM elements
@@ -55,6 +62,47 @@ removeItemBtn.addEventListener("click", (event) => {
 
 
 ////**firebase code goessss hereeee */
+// Submit button functionality
+const donationForm = document.getElementById("donationForm");
+
+donationForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  try {
+    const mobileNo = document.getElementById("mobileNo").value;
+    const foodItems = [];
+    const quantities = [];
+    const foodItemElements = document.querySelectorAll(".food-item");
+
+    foodItemElements.forEach((item) => {
+      const foodName = item.querySelector("input[name='foodItems']").value;
+      const quantity = item.querySelector("input[name='quantity']").value;
+      foodItems.push(foodName);
+      quantities.push(quantity);
+    });
+
+    const bestTillDate = document.getElementById("bestTillDate").value;
+    const bestTillTime = document.getElementById("bestTillTime").value;
+    const bestTill = `${bestTillDate} ${bestTillTime}`;
+
+    const donationData = {
+      donorEmail: null,
+      donorId: null,
+      mobileNo,
+      foodItems,
+      quantity: quantities,
+      bestTill,
+      pickupTill: null,
+      status: "pending",
+    };
+
+    const docRef = await addDoc(collection(db, "donations"), donationData);
+    console.log("Donation added with ID: ", docRef.id);
+    alert("Donation successfully submitted!");
+  } catch (error) {
+    console.error("Error adding donation: ", error);
+    alert("Failed to submit donation. Please try again later.");
+  }
+});
 
 
 });
