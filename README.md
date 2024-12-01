@@ -6,4 +6,4 @@ This is a repository for Food-wastage-reduction-tracker webapp
 ## (harshit) created frontend for post page and figured out database structure for claim/donate operations on 30 nov at 1:28 am 
 ## added redirect feature to the post button { by anuj} 1 dec 4:25 pm
 ## backend of post donation page has been done by harshit on 1 dec 9:15 pm
-
+## (harshit)whole backend and frontend of claim donation page is created by harshit till 2 am 2 dec 2024
