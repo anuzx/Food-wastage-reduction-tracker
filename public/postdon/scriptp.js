@@ -1,8 +1,12 @@
 alert("javacript file has loaded");
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
+
+
 
 // Firestore initialization
 const db = getFirestore();
+const storage = getStorage();
  
 
 document.addEventListener("DOMContentLoaded", () => {
