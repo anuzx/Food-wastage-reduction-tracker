@@ -9,3 +9,5 @@ This is a repository for Food-wastage-reduction-tracker webapp
 ## (harshit)whole backend and frontend of claim donation page is created by harshit till 2 am 2 dec 2024
 ## (harshit) backend of login page is fully created by harshit at 2:27 am 2 dec
 ## (harshit) pages are linked by harshit on 2:35
+## (harshit) profile section is created by harshit on 3:52 am
+## (harshit) different pages are created and linked by harshit on 3:52
