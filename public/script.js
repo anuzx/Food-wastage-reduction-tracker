@@ -34,3 +34,8 @@ themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem('darkmode')
   darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
+
+document.getElementById('redirect-button').addEventListener('click', function() {
+  window.location.href = 'postdon/indexp.html';
+});
+
