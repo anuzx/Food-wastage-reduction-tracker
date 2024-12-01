@@ -1,13 +1,6 @@
-
 // Import the functions you need from the SDKs you need
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-// import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getAuth, signinUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,31 +14,30 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 
-
-//submit button
+// Submit button
 const submit = document.getElementById('submit');
 submit.addEventListener("click", function (event) {
-  event.preventDefault()
-  //inputs
+  event.preventDefault();
+  
+  // Get input values
   const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;   
+  const password = document.getElementById('password').value;
 
-  signinUserWithEmailAndPassword(auth, email, password)
+  // Use the correct function for signing in with email and password
+  signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed up 
+      // Signed in 
       const user = userCredential.user;
-      alert("Creatinfg Account...")
-      // ...
+      alert("Login Successful! Welcome " + user.email);
+      // Optionally, you can redirect to another page after successful login:
+       window.location.href = "index.html";  // For example
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       alert(`Error: ${errorMessage}`);
       console.error("Error code:", errorCode, "Message:", errorMessage);
-      // ..
     });
-
-})
+});
