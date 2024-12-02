@@ -48,7 +48,8 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
   - Submit donation posts visible to NGOs and other entities.
 - Real-time database updates via Firebase.
 
-![Post Donation Page Screenshot](public/screenshot_for_readme/post donation.PNG)
+![Post Page Screenshot](public/screenshot_for_readme/post donation.PNG)
+
 
 ---
 
