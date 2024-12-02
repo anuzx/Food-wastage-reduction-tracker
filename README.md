@@ -4,7 +4,7 @@
 
 ### **Reducing Food Wastage Through Technology**
 
-Our platform is a tech-driven solution to connect individuals, NGOs, and restaurants for reducing food wastage. 
+Our platform is a tech-driven solution to connect individuals, NGOs and restaurants for reducing food wastage. 
 # 🥗 **FOODCONNECT** - *Reducing Food Wastage Through Technology*
 
 <div align="center">
@@ -18,7 +18,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
 ---
 
 ### **🌟 Empowering Communities**  
-FOODCONNECT is a platform that bridges the gap between excess food and those in need. Whether you're an individual, NGO, or restaurant, our tech-enabled platform helps reduce food wastage, one meal at a time.
+FOODCONNECT is a platform that bridges the gap between excess food and those in need. Whether you're an individual, NGO or restaurant, our tech-enabled platform helps reduce food wastage, one meal at a time.
 
 ---
 
