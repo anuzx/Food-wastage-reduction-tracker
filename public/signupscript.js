@@ -41,7 +41,7 @@ submit.addEventListener("click", function (event) {
   const fullname = document.getElementById("name").value;
   const userType = document.getElementById("usertype").value;
   const confirmpassword = document.getElementById("confirmpassword").value;
-  const currentUser = auth.currentUser;
+  
   if(confirmpassword != password){
     alert("confirm password doesnt matches");
     window.location.reload();
@@ -64,13 +64,18 @@ if (!submit) {
         Email: email,
         Fullname: fullname,
         UserType: userType,
-        donorId: currentUser.uid
+        coins : 0,
+        donationsClaimed :0,
+        donationsMade :0
+
+        
       });
       console.log("document added to firestore successfully");
       alert("Data added successfully");
+      window.location.href='index1.html';
     } catch (error) {
       console.error("Error adding document to Firestore:", error);
-      alert("Unsuccessful operation, error: " + error);
+      alert("Unsuccessful operation, error:  " + error);
     }
   }
   
@@ -79,7 +84,7 @@ if (!submit) {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    alert("Creatinfg Account...")
+    alert("Creating Account...")
     // ...
     console.log("Script loaded successfully");
     add_document_autoID();
@@ -89,7 +94,7 @@ if (!submit) {
     const errorCode = error.code;
     const errorMessage = error.message;
     alert(`Error: ${errorMessage}`);
-    console.error("Error code:", errorCode, "Message:", errorMessage);
+    console.error("Error code: ", errorCode, "Message:  ", errorMessage);
     // ..
   });
   

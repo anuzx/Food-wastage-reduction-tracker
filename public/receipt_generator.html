@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Receipt</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .card:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen flex items-center justify-center">
+  <div class="max-w-4xl w-full bg-white rounded-lg shadow-lg p-6 card transition-all duration-300">
+    <div class="text-center mb-6">
+      <h1 class="text-2xl font-bold text-gray-800">Donation Receipt</h1>
+      <p class="text-gray-500 mt-1">(These features are to be implemented)</p>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Static User Information -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-gray-600 font-medium mb-2">Your Name</label>
+          <p class="text-gray-800 font-semibold">John Doe</p>
+        </div>
+        <div>
+          <label class="block text-gray-600 font-medium mb-2">Email Address</label>
+          <p class="text-gray-800 font-semibold">johndoe@example.com</p>
+          <p class="text-gray-500 text-sm"></p>
+        </div>
+      </div>
+
+      <!-- Testimonial Coins Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-gray-600 font-medium mb-2">Coins Owned</label>
+          <p class="text-gray-800 font-semibold" id="testimonialCoins">50</p>
+        </div>
+        <div>
+          <label class="block text-gray-600 font-medium mb-2">Donation Amount (in INR)</label>
+          <p class="text-gray-800 font-semibold" id="calculatedAmount">₹50</p>
+        </div>
+      </div>
+
+      <!-- Receipt Date -->
+      <div>
+        <label class="block text-gray-600 font-medium mb-2">Receipt Date</label>
+        <p class="text-gray-800 font-semibold" id="currentDate"></p>
+      </div>
+
+      <!-- Compliance Note -->
+      <div class="bg-gray-100 p-4 rounded-lg">
+        <p class="text-sm text-gray-600">
+          This receipt is issued in compliance with the <strong>80G Act</strong> under the Income Tax laws of the Government of India. 
+          <strong>1 Coin = ₹1 Donation</strong>.
+        </p>
+      </div>
+
+      <!-- Placeholder for "Redeem" Feature -->
+      <button
+        class="w-full py-2 px-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition">
+        Generate Official Receipt 
+      </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Automatically populate the receipt data
+      const coinsOwned = 50; // Example testimonial coins
+      const donationAmount = coinsOwned * 1; // 1 coin = ₹1
+
+      // Set dynamic data
+      document.getElementById("testimonialCoins").textContent = coinsOwned;
+      document.getElementById("calculatedAmount").textContent = `₹${donationAmount}`;
+
+      // Set current date
+      const currentDate = new Date().toLocaleDateString("en-IN", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+      document.getElementById("currentDate").textContent = currentDate;
+    });
+  </script>
+</body>
+</html>
