@@ -31,7 +31,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
 - User types: **Individual Donors**, **NGOs**, and **Restaurants**.
 - Password recovery and email verification are supported.
 
-![Authentication Page Screenshot](public/screenshot_for_readme/mainhomepage.PNG)
+![Authentication Page Screenshot](public/screenshot_for_readme/auth.PNG)
 
 ---
 
@@ -44,7 +44,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
   - `Contact Us`
 - **Aesthetic Design**: Gradient backgrounds, animations, and interactive UI.
 
-![Home Page Screenshot](#)
+![Home Page Screenshot](public/screenshot_for_readme/mainhomepage.PNG)
 
 ---
 
@@ -54,7 +54,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
   - **Coins Owned**: Rewards for every donation (redeemable for tax benefits).
 - Includes a logout button for quick sign-out.
 
-![Profile Page Screenshot](#)
+![Profile Page Screenshot](public/screenshot_for_readme/profile.PNG)
 
 ---
 
@@ -64,7 +64,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
   - Submit donation posts visible to NGOs and other entities.
 - Real-time database updates via Firebase.
 
-![Post Donation Page Screenshot](#)
+![Post Donation Page Screenshot](public/screenshot_for_readme/post donation.PNG)
 
 ---
 
@@ -73,7 +73,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
 - Real-time updates on food availability with instant claim notifications.
 - Tracks claimed donations for future reference.
 
-![Claim Donation Page Screenshot](#)
+![Claim Donation Page Screenshot](public/screenshot_for_readme/claimdonation.PNG)
 
 ---
 
@@ -81,7 +81,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
 - Generates a **donation receipt** for tax redemption purposes under **India's 80G Act**.
 - Downloadable as PDF for user convenience.
 
-![Receipt Generator Screenshot](#)
+![Receipt Generator Screenshot](public/screenshot_for_readme/reciept_generator_page.PNG)
 
 ---
 
@@ -91,7 +91,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
   - Donor types (e.g., Individuals, Restaurants, NGOs).
 - Powered by **Chart.js** for a sleek, responsive design.
 
-![Graphs Screenshot](#)
+![Graphs Screenshot](public/screenshot_for_readme/graphs.PNG)
 
 ---
 
@@ -126,27 +126,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
 
 ---
 
-## 🖼️ Screenshots
 
-### **Authentication Page**
-![Authentication Page](#)
-
-### **Home Page**
-![Home Page](#)
-
-### **Profile Page**
-![Profile Page](#)
-
-### **Post Donation Page**
-![Post Donation Page](#)
-
-### **Claim Donation Page**
-![Claim Donation Page](#)
-
-### **Receipt Generator**
-![Receipt Generator](#)
-
----
 
 ## 🔗 Get Started
 
