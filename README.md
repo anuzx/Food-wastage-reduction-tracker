@@ -11,3 +11,7 @@ This is a repository for Food-wastage-reduction-tracker webapp
 ## (harshit) pages are linked by harshit on 2:35
 ## (harshit) profile section is created by harshit on 3:52 am
 ## (harshit) different pages are created and linked by harshit on 3:52
+##  (harshit) new homepage designed by harshit
+## (harshit) (styling of ui is done by harshit)
+## (harshit ) current user state handling is done by harshit
+##  (harshit) coin system designed by harshit
