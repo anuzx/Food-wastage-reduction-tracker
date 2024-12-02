@@ -31,6 +31,7 @@ submit.addEventListener("click", function (event) {
       // Signed in 
       const user = userCredential.user;
       alert("Login Successful! Welcome " + user.email);
+      
       // Optionally, you can redirect to another page after successful login:
        window.location.href = "index.html";  // For example
     })
