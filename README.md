@@ -31,7 +31,7 @@ Our platform is a tech-driven solution to connect individuals, NGOs, and restaur
 - User types: **Individual Donors**, **NGOs**, and **Restaurants**.
 - Password recovery and email verification are supported.
 
-![Authentication Page Screenshot](#)
+![Authentication Page Screenshot](public/screenshot_for_readme/mainhomepage.PNG)
 
 ---
 
