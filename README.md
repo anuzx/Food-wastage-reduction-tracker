@@ -4,7 +4,8 @@
 
 ### **Reducing Food Wastage Through Technology**
 
-Our platform is a tech-driven solution to connect individuals, NGOs, and restaurants for reducing food wastage. Wit# 🥗 **FOODCONNECT** - *Reducing Food Wastage Through Technology*
+Our platform is a tech-driven solution to connect individuals, NGOs, and restaurants for reducing food wastage. 
+# 🥗 **FOODCONNECT** - *Reducing Food Wastage Through Technology*
 
 <div align="center">
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge" />
