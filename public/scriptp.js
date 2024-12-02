@@ -1,4 +1,4 @@
-alert("javacript file has loaded");
+console.log("javacript file has loaded");
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const docRef = await addDoc(collection(db, "donations"), donationData);
       console.log("Donation added with ID: ", docRef.id);
       alert("Donation successfully submitted!");
+      window.location.href ='indexc.html';
     } catch (error) {
       console.error("Error adding donation: ", error);
       alert("Failed to submit donation. Please try again later.");

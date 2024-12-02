@@ -1,7 +1,11 @@
-import { getFirestore, collection, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
-// Firestore initialization
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+import { getFirestore, collection, getDocs, updateDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+
+// Firestore and Auth initialization
 const db = getFirestore();
+const auth = getAuth();
 
 // Function to Fetch Donations
 async function fetchDonations() {
@@ -73,11 +77,37 @@ async function fetchDonations() {
 }
 
 // Function to Claim Donation
+// Function to Claim Donation
 async function claimDonation(donationId, button) {
   console.log('Claiming donation with ID:', donationId); // Debugging log
 
   try {
+    // Fetch the current user's email
+    const user = auth.currentUser;
+    if (!user) {
+      alert("You need to be logged in to claim a donation.");
+      return;
+    }
+    const userEmail = user.email;
+
+    // Fetch the donation document
     const donationRef = doc(db, 'donations', donationId);
+    const donationSnap = await getDoc(donationRef); // Use getDoc() for a single document
+    const donationData = donationSnap.data();
+
+    if (!donationData) {
+      alert("Donation not found.");
+      return;
+    }
+
+    const donorEmail = donationData.donorEmail || "";
+
+    // Check if the current user is the donor
+    if (userEmail === donorEmail) {
+      alert("You cannot claim this donation as it was made by you.");
+      return;
+    }
+
     console.log('Updating donation status to "claimed"...'); // Debugging log
     await updateDoc(donationRef, {
       status: 'claimed' // Update status to 'claimed'
@@ -96,6 +126,7 @@ async function claimDonation(donationId, button) {
     console.error('Error updating donation status:', error);
   }
 }
+
 
 // Function to show the claim modal
 function showClaimModal() {
@@ -118,3 +149,12 @@ function showClaimModal() {
 
 // Load Donations on Page Load
 window.onload = fetchDonations;
+
+// Listen for authentication state changes (optional, for debugging)
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log(`Logged in as: ${user.email}`);
+  } else {
+    console.log("No user is logged in.");
+  }
+});
