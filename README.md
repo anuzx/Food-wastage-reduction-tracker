@@ -15,3 +15,4 @@ This is a repository for Food-wastage-reduction-tracker webapp
 ## (harshit) (styling of ui is done by harshit)
 ## (harshit ) current user state handling is done by harshit
 ##  (harshit) coin system designed by harshit
+## (harshit) final done everything for a basic prototype
