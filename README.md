@@ -1,6 +1,6 @@
 
 
-# 🥗 Food Donation Platform  
+# 🥗 FOODCONNECT (Food Donation Platform)  
 
 ### **Reducing Food Wastage Through Technology**
 
