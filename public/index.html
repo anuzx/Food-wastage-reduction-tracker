@@ -2,113 +2,118 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ICONS -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- STYLESHEET -->
+    <title>Food Donation Platform</title>
     <link rel="stylesheet" href="style.css" />
-
-    <title>Sidebar</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-<button class="bottom-right-button" id="redirect-button">+</button>
-    <button id="theme-switch">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-    </button>
-    <div class="container">
-      <div class="sidebar">
-        <div class="menu-btn">
-          <i class="ph-bold ph-caret-left"></i>
-        </div>
-        <div class="head">
-          <div class="user-img">
-            <img src="user.jpg" alt="" />
-          </div>
-          <div class="user-details">
-            <p class="title">INDIVIDUAL</p>
-            <p class="name">Name</p>
-          </div>
-        </div>
-        <div class="nav">
-          <div class="menu">
-            <p class="title">Main</p>
-            <ul>
-              <li>
-                <a href="dashboard.html">
-                  <i class="icon ph-bold ph-house-simple"></i>
-                  <span class="text">Dashboard</span>
-                </a>
-              </li>
+    <header class="header">
+      <div class="logo">Food<span>Connect</span></div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="indexp.html">Post Donation</a>
+        <a href="indexc.html">Claim Donation</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
 
-              <li class="active">
-                <a href="indexc.html">
-                  <i class="icon ph-bold ph-file-text"></i>
-                  <span class="text">Active Donations</span>
-                </a>
-              </li>
-              <li>
-                <a href="schedules.html">
-                  <i class="icon ph-bold ph-calendar-blank"></i>
-                  <span class="text">Schedules</span>
-                </a>
-              </li>
-              <li>
-                <a href="bookmarks.html">
-                  <i class="icon ph-bold ph-bookmark-simple"></i>
-                  <span class="text">Bookmarks</span>
-                </a>
-              </li>
-              
-            </ul>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Make Every Meal Count</h1>
+          <p>
+            Transform surplus food into smiles. Join our movement to reduce
+            food wastage and help those in need.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn primary">Post Donation :)</button>
+            <button class="btn secondary">Claim Donation </button>
           </div>
-          <div class="menu">
-            <p class="title">Settings</p>
-            <ul>
-              <li>
-                <a href="setting.html">
-                  <i class="icon ph-bold ph-gear"></i>
-                  <span class="text">Settings</span>
-                </a>
-              </li>
-              <li>
-                <a href="profile.html">
-                  <i class="icon ph-bold ph-pencil-simple-line"></i>
-                  <span class="text">Edit profile</span>
-                  
-                </a>
-              </li>
-            </ul>
+        </div>
+       
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="about" class="about">
+        <h2>How Do We Help</h2>
+        <div class="steps">
+          <div class="step">
+            <img src="food-donation (2).png" alt="Step 1" />
+            <p><b>Restaurants</b> and individuals donate surplus food.</p>
           </div>
+          <div class="step">
+            <img src="ngo (1).png" alt="Step 2" />
+            <p>We connect with <b>NGOs</b> and distribute food efficiently.</p>
+          </div>
+          <div class="step">
+            <img src="help.png" alt="Step 3" />
+            <p>Food reaches <b>those in need</b>, creating a positive impact.</p>
+          </div>
+        </div>
+      </section>
+      <section id="how-we-help">
+        <div class="section-title">
+          <h2>How Will You Get Benefitted !!</h2>
+          <p>Your donation not only helps others but also rewards you!</p>
         </div>
         
-        <div class="menu">
-          <p class="title">Account</p>
-          <ul>
-            <li>
-              <a href="#">
-                <i class="icon ph-bold ph-info"></i>
-                <span class="text">Help</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="icon ph-bold ph-sign-out"></i>
-                <span class="text">Logout</span>
-              </a>
-            </li>
-          </ul>
+        <div class="help-steps">
+          <div class="step">
+            <h3>1. Donate Food</h3>
+            <p>Donate food through our platform. Whether you are an individual, restaurant, or NGO, you can easily contribute.</p>
+            <img src="food-donation (2).png" alt="Step 1: Donate Food">
+          </div>
+          <div class="step">
+            <h3>2. Earn Donation Coins</h3>
+            <p>For every donation, you earn coins that can be redeemed for future contributions.</p>
+            <img src="rupee.png" alt="Step 2: Earn Coins">
+          </div>
+          <div class="step">
+            <h3>3. Receive Tax Receipt</h3>
+            <p>Your donation comes with a tax receipt under section 80G of the Income Tax Act, India. This receipt allows you to claim tax deductions of up to 50% or more, depending on the charity's eligibility.</p>
+            <img src="no-tax.png" alt="Step 3: Tax Receipt">
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Jquery -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
-      integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
-      crossorigin="anonymous"
-    ></script>
+      <!-- Impact Section -->
+      <section id="impact" class="impact">
+        <h2>Our Impact</h2>
+        <div class="charts">
+          <div class="chart">
+            <h3>Meals Donated</h3>
+            <canvas id="mealsChart"width="300" height="300"></canvas>
+          </div>
+          <div class="chart">
+            <h3>Donor Types</h3>
+            <canvas id="Donor" width="400" height="300"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>
+          Have questions or want to contribute? Reach out to us and become part
+          of the change!
+        </p>
+        <button class="btn primary">Get in Touch</button>
+      </section>
+      
+      
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 FoodConnect. All Rights Reserved.
+        <p>Made by the students of JSS Noida with <span class="heart">&#10084;</span> love</p>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
