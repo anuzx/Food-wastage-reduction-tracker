@@ -77,7 +77,7 @@ FOODCONNECT is a platform that bridges the gap between excess food and those in 
 ---
 
 ## 📊 **Graphs and Statistics**
-- 📈 **Interactive Charts**: Track donation trends (line charts, pie charts).
+- 📈 **Interactive Charts**: Track donation trends (line charts,pie charts).
 - 📊 **Donor Breakdown**: Visualize donor types and donation stats.
 
 ![Graphs Screenshot](public/screenshot_for_readme/graphs.PNG)
